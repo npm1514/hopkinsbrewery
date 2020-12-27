@@ -10,6 +10,7 @@ import bodyParser from 'body-parser';
 import passport from 'passport';
 import session from 'express-session';
 import mongoose from 'mongoose';
+import cron from 'node-cron';
 import Cryptr from 'cryptr';
 const cryptr = new Cryptr(config.key);
 import config from './config';
@@ -38,6 +39,11 @@ app.use(compression());
 app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
+
+cron.schedule('* * 1 * *', () => {
+  fetch('http://www.cafejuniperslc.com/')
+  .then(res => console.log("requested at " + new Date()));
+});
 
 var dataObj = {},
 mainBundle = "",
