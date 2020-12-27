@@ -24,6 +24,8 @@ var _expressSession = _interopRequireDefault(require("express-session"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
+var _nodeCron = _interopRequireDefault(require("node-cron"));
+
 var _cryptr = _interopRequireDefault(require("cryptr"));
 
 var _config = _interopRequireDefault(require("./config"));
@@ -59,6 +61,13 @@ app.use((0, _compression["default"])());
 app.use((0, _cors["default"])());
 app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
+
+_nodeCron["default"].schedule('* * 1 * *', function () {
+  (0, _nodeFetch["default"])('http://www.cafejuniperslc.com/').then(function (res) {
+    return console.log("requested at " + new Date());
+  });
+});
+
 var dataObj = {},
     mainBundle = "",
     cmslistBundle = "",
@@ -82,7 +91,7 @@ _fs["default"].readFile('./dist/js/cmscontent.bundle.min.js', "utf8", function (
 app.get('/', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, mainBundle, _roots.MainRoot, "main"));
+  res.send(returnHTML(data, mainBundle, _roots.MainRoot, "Hopkins Brewing Co."));
 });
 app.get('/cmslist', function (req, res) {
   var data = "";
@@ -162,7 +171,7 @@ function returnHTML(data, bundle, Page, title) {
     data: data
   })));
   var styles = sheet.getStyleTags();
-  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap\" rel=\"stylesheet\">\n                <style>\n\n                  body { margin: 0; font-family: 'Antic Slab', serif; letter-spacing: 1.2; }\n                  a, button { text-decoration: none; color: #000; font-family: 'Antic Slab', serif; letter-spacing: 1.2; }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
+  return "\n            <html lang=\"en\">\n              <head>\n                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n                <title>".concat(title, "</title>\n                <meta name=\"Description\" content=\"").concat(title, "\">\n                <meta property=\"og:site_name\" content=\" Hopkins Brewing Co.\">\n                <meta property=\"og:title\" content=\"Home\">\n                <meta property=\"og:url\" content=\"http://hopkinsbrewingcompany.com/\">\n                <meta property=\"og:type\" content=\"website\">\n                <link data-default-icon=\"/images/hops.ico\" data-badged-icon=\"/images/hops.ico\" rel=\"shortcut icon\" href=\"/images/hops.ico\">\n                <link rel=\"canonical\" href=\"http://hopkinsbrewingcompany.com/\">\n                <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n                <link href=\"https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap\" rel=\"stylesheet\">\n                <style>\n\n                  body { margin: 0; font-family: 'Antic Slab', serif; letter-spacing: 1.2; }\n                  a, button { text-decoration: none; color: #000; font-family: 'Antic Slab', serif; letter-spacing: 1.2; }\n                </style>\n                ").concat(styles, "\n              </head>\n              <body>\n                <script>window.os = window.os || {};</script>\n                <script>window.__DATA__=").concat(dataString, "</script>\n                <div id=\"app\" role=\"main\">").concat(body, "</div>\n                <script>").concat(bundle, "</script>\n              </body>\n            </html>\n          ");
 }
 
 function errHandle(err) {

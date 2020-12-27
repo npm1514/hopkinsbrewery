@@ -64,7 +64,7 @@ fs.readFile('./dist/js/cmscontent.bundle.min.js', "utf8", (err, data) => {
 app.get('/', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.send(returnHTML(data, mainBundle, MainRoot, "main"));
+  res.send(returnHTML(data, mainBundle, MainRoot, "Hopkins Brewing Co."));
 });
 app.get('/cmslist', (req, res) => {
   let data = "";
@@ -156,6 +156,12 @@ function returnHTML(data, bundle, Page, title){
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>${title}</title>
                 <meta name="Description" content="${title}">
+                <meta property="og:site_name" content=" Hopkins Brewing Co.">
+                <meta property="og:title" content="Home">
+                <meta property="og:url" content="http://hopkinsbrewingcompany.com/">
+                <meta property="og:type" content="website">
+                <link data-default-icon="/images/hops.ico" data-badged-icon="/images/hops.ico" rel="shortcut icon" href="/images/hops.ico">
+                <link rel="canonical" href="http://hopkinsbrewingcompany.com/">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
                 <style>
