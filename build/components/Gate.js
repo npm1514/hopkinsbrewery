@@ -51,11 +51,16 @@ var GateComponent = /*#__PURE__*/function (_Component) {
   _createClass(GateComponent, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_gate.Gate, null, /*#__PURE__*/_react["default"].createElement("h2", null, "Are you 21 or older?"), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_global.Button, {
+      return /*#__PURE__*/_react["default"].createElement(_gate.Gate, null, /*#__PURE__*/_react["default"].createElement(_gate.Gatebox, null, /*#__PURE__*/_react["default"].createElement("img", {
+        style: {
+          width: "150px"
+        },
+        src: "/images/Logo_2.png"
+      }), /*#__PURE__*/_react["default"].createElement("h2", null, "Are you 21 or older?"), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_global.Button, {
         onClick: this.props.selectYes
       }, "Yes"), /*#__PURE__*/_react["default"].createElement("a", {
         href: ""
-      }, /*#__PURE__*/_react["default"].createElement(_global.Button, null, "No"))));
+      }, /*#__PURE__*/_react["default"].createElement(_global.Button, null, "No")))));
     }
   }]);
 

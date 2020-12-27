@@ -46,5 +46,7 @@ export const Button = styled.button`
   width: max-content;
   &:hover {
     cursor: pointer;
+    background-color: #8d8d8d;
+    color: #fff;
   }
 `;

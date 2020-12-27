@@ -18,9 +18,16 @@ export const Gate = styled.div`
   align-items: center;
   border: 1px solid #8d8d8d;
   z-index: 50;
-  button:hover {
-    pointer: cursor;
-    background-color: #8d8d8d;
-    z-index: 100;
-  }
+`;
+
+export const Gatebox = styled.div`
+  background-color: #ffffff;
+  color: #000;
+  padding: 16px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8d8d8d;
 `;
