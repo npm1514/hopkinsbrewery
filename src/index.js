@@ -41,7 +41,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
 cron.schedule('* * 1 * *', () => {
-  fetch('http://www.cafejuniperslc.com/')
+  fetch('https://hopkinsbrewery.herokuapp.com/')
   .then(res => console.log("requested at " + new Date()));
 });
 

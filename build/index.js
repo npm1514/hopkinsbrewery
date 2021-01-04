@@ -63,7 +63,7 @@ app.use(_bodyParser["default"].json());
 app.use(_bodyParser["default"].urlencoded());
 
 _nodeCron["default"].schedule('* * 1 * *', function () {
-  (0, _nodeFetch["default"])('http://www.cafejuniperslc.com/').then(function (res) {
+  (0, _nodeFetch["default"])('https://hopkinsbrewery.herokuapp.com/').then(function (res) {
     return console.log("requested at " + new Date());
   });
 });
