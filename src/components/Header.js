@@ -8,11 +8,12 @@ class HeaderComponent extends Component {
       <HeaderWrap>
         <Header>
           <a href="/"><img src="/images/logo_1_white.png"/></a>
-          <h1>HOPKINS</h1>
-          <a href="https://hopkinsbrewing.mobilebytes.com/" target="_blank">
-            <Button>Order Online</Button>
-          </a>
+          <h1>HOPKINS BREWING COMPANY</h1>
+          <div className="orderOnline">
+            <Button href="https://hopkinsbrewing.mobilebytes.com/" target="_blank">Order Online</Button>
+          </div>
         </Header>
+
         <Spacer/>
       </HeaderWrap>
     );

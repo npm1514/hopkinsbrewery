@@ -91,11 +91,7 @@ var Main = /*#__PURE__*/function (_Component) {
         selectYes: this.selectYes
       }), /*#__PURE__*/_react["default"].createElement(_main.MainContent, {
         bg: "/images/brick-2-1.jpg"
-      }, /*#__PURE__*/_react["default"].createElement(_main.CenterBox, null, /*#__PURE__*/_react["default"].createElement("h2", null, "Beer Menu"), /*#__PURE__*/_react["default"].createElement("hr", null), _menu["default"].beerMenu.map(function (a, i) {
-        return /*#__PURE__*/_react["default"].createElement("h3", {
-          key: i
-        }, a.name);
-      }))), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement("iframe", {
+      }, /*#__PURE__*/_react["default"].createElement(_main.CenterBox, null)), /*#__PURE__*/_react["default"].createElement(_global.ContentWrapper, null, /*#__PURE__*/_react["default"].createElement("iframe", {
         className: "mobileMap",
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.680271409915!2d-111.86313898413829!3d40.72505447933057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528bb7389501c3%3A0x2ed7798a32a58a0b!2sHopkins+Brewing+Company!5e0!3m2!1sen!2sus!4v1546385279227",
         width: "320",

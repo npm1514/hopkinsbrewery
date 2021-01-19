@@ -38,15 +38,7 @@ class Main extends Component {
               }
               <MainContent bg="/images/brick-2-1.jpg">
                 <CenterBox>
-                  <h2>Beer Menu</h2>
-                  <hr/>
-                  {
-                    menu.beerMenu.map((a, i) => {
-                      return (
-                        <h3 key={i}>{a.name}</h3>
-                      )
-                    })
-                  }
+                  
                 </CenterBox>
               </MainContent>
               <ContentWrapper>

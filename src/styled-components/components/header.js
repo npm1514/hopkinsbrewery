@@ -13,11 +13,16 @@ export const Header = styled.header`
   text-align: center;
   position: fixed;
   left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  top: 0
   z-index: 10;
+  .orderOnline {
+    position: absolute;
+    width: 100%;
+    bottom: -58px;
+    left: 0;
+    text-align: center;
+    background-color: #ffffffaa;
+  }
   img {
     width: 55px;
   }
@@ -25,7 +30,6 @@ export const Header = styled.header`
     z-index: 10;
   }
   h1 {
-    font-size: 46px;
     line-height: 87px;
     position: absolute;
     display: none;
@@ -35,9 +39,17 @@ export const Header = styled.header`
     bottom: 0;
     margin: 0;
   }
-  @media(min-width: 700px){
+  @media(min-width: 550px){
+    text-align: left;
     h1 {
       display: block;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+  @media(min-width: 800px){
+    h1 {
+      font-size: 46px;
     }
   }
 `;

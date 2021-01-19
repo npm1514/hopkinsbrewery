@@ -55,10 +55,12 @@ var HeaderComponent = /*#__PURE__*/function (_Component) {
         href: "/"
       }, /*#__PURE__*/_react["default"].createElement("img", {
         src: "/images/logo_1_white.png"
-      })), /*#__PURE__*/_react["default"].createElement("h1", null, "HOPKINS"), /*#__PURE__*/_react["default"].createElement("a", {
+      })), /*#__PURE__*/_react["default"].createElement("h1", null, "HOPKINS BREWING COMPANY"), /*#__PURE__*/_react["default"].createElement("div", {
+        className: "orderOnline"
+      }, /*#__PURE__*/_react["default"].createElement(_global.Button, {
         href: "https://hopkinsbrewing.mobilebytes.com/",
         target: "_blank"
-      }, /*#__PURE__*/_react["default"].createElement(_global.Button, null, "Order Online"))), /*#__PURE__*/_react["default"].createElement(_header.Spacer, null));
+      }, "Order Online"))), /*#__PURE__*/_react["default"].createElement(_header.Spacer, null));
     }
   }]);
 

@@ -20,7 +20,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  width: calc(100vw - 32px);\n  background-color: #666;\n  color: #fff;\n  padding: 16px;\n  text-align: center;\n  position: fixed;\n  left: 0;\n  top: 0;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  z-index: 10;\n  img {\n    width: 55px;\n  }\n  a {\n    z-index: 10;\n  }\n  h1 {\n    font-size: 46px;\n    line-height: 87px;\n    position: absolute;\n    display: none;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    margin: 0;\n  }\n  @media(min-width: 700px){\n    h1 {\n      display: block;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 55px;\n  width: calc(100vw - 32px);\n  background-color: #666;\n  color: #fff;\n  padding: 16px;\n  text-align: center;\n  position: fixed;\n  left: 0;\n  top: 0\n  z-index: 10;\n  .orderOnline {\n    position: absolute;\n    width: 100%;\n    bottom: -58px;\n    left: 0;\n    text-align: center;\n    background-color: #ffffffaa;\n  }\n  img {\n    width: 55px;\n  }\n  a {\n    z-index: 10;\n  }\n  h1 {\n    line-height: 87px;\n    position: absolute;\n    display: none;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    margin: 0;\n  }\n  @media(min-width: 550px){\n    text-align: left;\n    h1 {\n      display: block;\n      font-size: 26px;\n      text-align: center;\n    }\n  }\n  @media(min-width: 800px){\n    h1 {\n      font-size: 46px;\n    }\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
